@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+        <audio id="kaiten" preload="auto">
+            <source src="oto/kaiten.mp3" type="audio/mp3">
+        </audio>
+        <audio id="ochiru" preload="auto">
+            <source src="oto/ochiru.mp3" type="audio/mp3">
+        </audio>
+        <audio id="don" preload="auto">
+            <source src="oto/don.mp3" type="audio/mp3">
+        </audio>
+        <audio id="kieru" preload="auto">
+            <source src="oto/kieru.mp3" type="audio/mp3">
+        </audio>
+        <audio id="zenbu" preload="auto">
+            <source src="oto/zenbu.mp3" type="audio/mp3">
+        </audio>
+        <audio id="gameover" preload="auto">
+            <source src="oto/gameover.mp3" type="audio/mp3">
+        </audio>
+        <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+
+    <div class="content">
+<body onload="hajime()" onkeydown="ugokasu(event)">
+    <div style="position:absolute; left:550px; top:100px">
+        <h1>Tetris</h1>
+        <div style="width:380px;">
+            <h2>Score:<span id="tokuten">0</span></h2>
+        </div>
+        </div>
+        <canvas id="back" width="240" height="440"
+            style="position:absolute; left:550px; top:250px; background-color: black"></canvas>
+        <canvas id="game" width="240" height="440"
+            style="position:absolute; left:550px; top:250px; background-color: transparent"></canvas>
+        <canvas id="tsugi" width="80" height="80"
+            style="position:absolute; left:900px; top:250px; background-color: black"></canvas>
+        <button id="kaishibtn"
+            style="position: absolute; left:900px;top:400px; width:80px; height:50px" onclick="gamekaishi()">
+            Game<br>Start
+        </button>
+
+
+<script src="main.js"></script>
+
+</body>
+
+
+</html>
